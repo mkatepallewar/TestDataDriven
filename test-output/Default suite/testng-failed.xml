@@ -3,11 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.w2a.utilities.TestParameterisation">
+      <class name="com.w2a.suite.bankManager.testCases.OpenAccountTest">
         <methods>
-          <include name="testData"/>
+          <include name="OpenAccountTest"/>
         </methods>
-      </class> <!-- com.w2a.utilities.TestParameterisation -->
+      </class> <!-- com.w2a.suite.bankManager.testCases.OpenAccountTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -6,22 +6,16 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import com.w2a.utilities.Constants;
+import com.w2a.utilities.DataProviders;
 import com.w2a.utilities.DataUtil;
 import com.w2a.utilities.ExcelReader;
 
 public class OpenAccountTest {
 	
-	@Test(dataProvider = "getData")
-	public void OpenAccountTest(Hashtable<String, String> data) {
+	@Test(dataProviderClass = DataProviders.class, dataProvider = "bankManagerDP")
+	public void addCustomerTest(Hashtable<String, String> data) {
 		
 	}
-	
-	
-	@DataProvider
-	public Object[][] getData(){
-		
-		return DataUtil.getData("OpenAccountTest", new ExcelReader(System.getProperty("user.dir")+"\\src\\test\\resources\\testdata\\BankManagerSuite.xlsx"));
 
-	}
 
 }

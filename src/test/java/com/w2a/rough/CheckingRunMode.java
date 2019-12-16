@@ -10,15 +10,13 @@ public class CheckingRunMode {
 		// TODO Auto-generated method stub
 		
 		String suiteName="BankManagerSuite";
-		boolean suiteRunMode=DataUtil.isSuiteRunnable(suiteName, new ExcelReader(System.getProperty("user.dir")+"\\src\\test\\resources\\testdata\\Suite.xlsx"));
+		boolean suiteRunMode=DataUtil.isSuiteRunnable(suiteName);
 		System.out.println(suiteRunMode);
 		
 		
 		String testCaseName="OpenAccountTest";
 		boolean testRunmode=DataUtil.isTestRunnable(testCaseName, new ExcelReader(System.getProperty("user.dir")+"\\src\\test\\resources\\testdata\\"+suiteName+".xlsx"));
 		System.out.println(testRunmode);
-		
-		
 		
 	}
 

@@ -15,6 +15,16 @@ public class AddCustomerTest {
 	@Test(dataProviderClass = DataProviders.class, dataProvider = "customerDP")
 	public void addCustomerTest(Hashtable<String, String> data) {
 		
+		/*
+		 * Suite is runnable or not
+		 * testcase is runnable ot not
+		 * Data within test case is runnable ot not
+		 * 
+		 */
+		
+		ExcelReader excel = new ExcelReader(Constants.SUITE2_XL_PATH);
+		DataUtil.checkExecution("CustomerSuite", "AddCustomerTest", data.get("Runmode"), excel);
+		
 	}
 
 

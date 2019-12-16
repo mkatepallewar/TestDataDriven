@@ -13,8 +13,16 @@ import com.w2a.utilities.ExcelReader;
 public class OpenAccountTest {
 	
 	@Test(dataProviderClass = DataProviders.class, dataProvider = "customerDP")
-	public void addCustomerTest(Hashtable<String, String> data) {
+	public void openAccountTest(Hashtable<String, String> data) {
+		/*
+		 * Suite is runnable or not
+		 * testcase is runnable ot not
+		 * Data within test case is runnable ot not
+		 * 
+		 */
 		
+		ExcelReader excel = new ExcelReader(Constants.SUITE2_XL_PATH);
+		DataUtil.checkExecution("CustomerSuite", "OpenAccountTest", data.get("Runmode"), excel);
 	}
 
 

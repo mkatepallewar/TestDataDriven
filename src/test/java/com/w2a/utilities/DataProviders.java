@@ -11,6 +11,8 @@ public class DataProviders {
 		ExcelReader excel=new ExcelReader(Constants.SUITE1_XL_PATH);
 		
 		String testCase=m.getName();
+		System.out.println(excel);
+		System.out.println(testCase);
 		return DataUtil.getData(testCase, excel);
 	}
 	

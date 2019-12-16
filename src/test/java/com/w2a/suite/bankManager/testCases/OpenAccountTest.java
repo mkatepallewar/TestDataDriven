@@ -13,8 +13,10 @@ import com.w2a.utilities.ExcelReader;
 public class OpenAccountTest {
 	
 	@Test(dataProviderClass = DataProviders.class, dataProvider = "bankManagerDP")
-	public void addCustomerTest(Hashtable<String, String> data) {
+	public void openAccountTest(Hashtable<String, String> data) {
 		
+		ExcelReader excel = new ExcelReader(Constants.SUITE1_XL_PATH);
+		DataUtil.checkExecution("BankManagerSuite", "OpenAccountTest", data.get("Runmode"), excel);
 	}
 
 
